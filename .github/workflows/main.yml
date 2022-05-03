@@ -22,7 +22,7 @@
 #         ## Another way reference your environment variables
 #         run: echo "The API key is:$API_KEY"   
 
-name: env_tutorial
+name: main
 ## Triggers the workflow on when there is a push, or 
 ## pull request on the main branch
 on: push 
@@ -35,9 +35,11 @@ jobs:
       - name: step 1
         env:
           ## Environment variable for step 1
-          API_KEY: XXXXXXXXXXXX    
+          API_KEY: 2
+          API_KEY1: 3
+
         ## Reference your environment variables
-        run: echo "The API key is:${{env.API_KEY}}"   
+        run: echo "The API key is:${{env.API_KEY+env.API_KEY}}"   
       - name: step 2
         ## Reference your environment variables
         run: echo "The API key is:${{env.API_KEY}}" 
