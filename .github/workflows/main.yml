@@ -40,7 +40,7 @@ jobs:
     steps:
       - name: step 1
         ## Reference your environment variables
-        run: echo "The API key is:${{env.API_KEY}}"  
+        run: echo "The API key is:${{env.Name}}"  
         
 
   job2:
@@ -48,7 +48,7 @@ jobs:
     steps:
       - name: step 1
         ## Another way reference your environment variables
-        run: echo "The API key is:$API_KEY"   
+        run: echo "The API key is:$Name"   
 
 
 # name: main
