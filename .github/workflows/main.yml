@@ -49,55 +49,57 @@
       
 #         run: echo "The API key is:$Name"
 
-name: main
+# name: main
 
-on: push 
+# on: push 
 
-env: 
+# env: 
 
-      ## Environment variable define globally
-    name1: "aman"
+#       ## Environment variable define globally
+#     name1: "aman"
 
-    name2: "suraj"  
+#     name2: "suraj"  
 
-    number1: 55
-    number2: 12
-jobs:
-  job1:
+#     number1: 55
+#     number2: 12
+# jobs:
+#   job1:
     
-    runs-on: ubuntu-latest 
+#     runs-on: ubuntu-latest 
      
-    steps:
-      - name: step 1
+#     steps:
+#       - name: step 1
         
-        run: echo "The name both are:$name1 $name2"  
+#         run: echo "The name both are:$name1 $name2"  
         
 
-  job2:
-    runs-on: ubuntu-latest
-    steps:
-      - name: step 1
+#   job2:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: step 1
       
-        run: echo "The both name are :${name1}" 
+#         run: echo "The both name are :${name1}" 
 
 
  
 
-# name: main
+name: main
 
-# on: push 
-#   schedule:
-#     - cron: '5 * * * *'
-# jobs:
-#   build:
-#     name: Trigger Site Rebuild
-#     runs-on: ubuntu-latest
-#     env:
+on: push 
+  schedule:
+    - cron: '5 * * * *'
+jobs:
+  build:
+    name: Trigger Site Rebuild
+    runs-on: ubuntu-latest
+    env:
 
-#       ## Environment variable
-#       Name: "AMAN" 
-#     steps:
+      ## Environment variable
+      Name1: "AMAN" 
+    steps:
         
-#       - name: step 1
-#         ## Another way reference your environment variables
-#         run: echo "The API key is:$Name
+      - name: step 1
+        ## Another way reference your environment variables
+        run: echo "The API key is:$Name
+
+
