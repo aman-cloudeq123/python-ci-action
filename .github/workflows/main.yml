@@ -48,8 +48,8 @@
 name: main
 
 on: push 
-schedule:
-  - cron: '5 * * * *'
+  schedule:
+    - cron: '5 * * * *'
 jobs:
   build:
     name: Trigger Site Rebuild
