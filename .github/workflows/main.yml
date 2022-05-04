@@ -28,10 +28,10 @@ name: main
 ## pull request on the main branch
 on: push 
 
- env:
+env:
 
       ## Environment variable
-      Name: "aman" 
+    Name: "aman" 
 jobs:
   job1:
     ## The type of runner that the job will run on
