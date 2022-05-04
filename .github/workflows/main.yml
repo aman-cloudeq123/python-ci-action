@@ -59,6 +59,9 @@ env:
     name1: "aman"
 
     name2: "suraj"  
+
+    number1: 55
+    number2: 12
 jobs:
   job1:
     
@@ -67,7 +70,7 @@ jobs:
     steps:
       - name: step 1
         
-        run: echo "The name both are:{env.name1 env.name2}"  
+        run: echo "The name both are:${{env.name1 env.name2}}"  
         
 
   job2:
@@ -75,7 +78,7 @@ jobs:
     steps:
       - name: step 1
       
-        run: echo "The both name are :${name1 , name2}" 
+        run: echo "The both name are :${name1}" 
 
 
  
