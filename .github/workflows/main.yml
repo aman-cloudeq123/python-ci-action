@@ -23,6 +23,34 @@
 #         ## Another way reference your environment variables
 #         run: echo "The API key is:$API_KEY"   
 
+name: main
+## Triggers the workflow on when there is a push, or 
+## pull request on the main branch
+on: push 
+
+ env:
+
+      ## Environment variable
+      Name: "aman" 
+jobs:
+  job1:
+    ## The type of runner that the job will run on
+    runs-on: ubuntu-latest 
+     
+    steps:
+      - name: step 1
+        ## Reference your environment variables
+        run: echo "The API key is:${{env.API_KEY}}"  
+        
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step 1
+        ## Another way reference your environment variables
+        run: echo "The API key is:$API_KEY"   
+
+
 # name: main
 # ## Triggers the workflow on when there is a push, or 
 # ## pull request on the main branch
@@ -45,21 +73,21 @@
 #         ## Reference your environment variables
 #         run: echo "The API key is:${{env.API_KEY}}" 
 
-name: main
+# name: main
 
-on: push 
-  schedule:
-    - cron: '5 * * * *'
-jobs:
-  build:
-    name: Trigger Site Rebuild
-    runs-on: ubuntu-latest
-    env:
+# on: push 
+#   schedule:
+#     - cron: '5 * * * *'
+# jobs:
+#   build:
+#     name: Trigger Site Rebuild
+#     runs-on: ubuntu-latest
+#     env:
 
-      ## Environment variable
-      Name: "AMAN" 
-    steps:
+#       ## Environment variable
+#       Name: "AMAN" 
+#     steps:
         
-      - name: step 1
-        ## Another way reference your environment variables
-        run: echo "The API key is:$Name
+#       - name: step 1
+#         ## Another way reference your environment variables
+#         run: echo "The API key is:$Name
