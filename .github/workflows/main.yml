@@ -49,36 +49,7 @@
       
 #         run: echo "The API key is:$Name"
 
-# name: main
 
-# on: push 
-
-# env: 
-
-#       ## Environment variable define globally
-#     name1: "aman"
-
-#     name2: "suraj"  
-
-#     number1: 55
-#     number2: 12
-# jobs:
-#   job1:
-    
-#     runs-on: ubuntu-latest 
-     
-#     steps:
-#       - name: step 1
-        
-#         run: echo "The name both are:$name1 $name2"  
-        
-
-#   job2:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: step 1
-      
-#         run: echo "The both name are :${name1}" 
 
 
  
@@ -87,7 +58,7 @@ name: main
 
 on: 
   schedule:
-    - cron: '5 * * * *'
+    - cron: '*/1 * * * *'
 jobs:
   build:
    
