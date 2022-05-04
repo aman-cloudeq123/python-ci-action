@@ -90,7 +90,7 @@ on: push
     - cron: '*/5 * * * *'
 jobs:
   build:
-    name: Trigger Site Rebuild
+   
     runs-on: ubuntu-latest
    
     steps:
