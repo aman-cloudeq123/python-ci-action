@@ -53,7 +53,7 @@ name: main
 
 on: push 
 
-env:
+env: |
 
       ## Environment variable define globally
     A: 1
@@ -66,7 +66,7 @@ jobs:
     steps:
       - name: step 1
         
-        run: echo "The API key is:${{env.A }}"  
+        run: echo "The API key is:${{env.A + env.B}}"  
         
 
   job2:
