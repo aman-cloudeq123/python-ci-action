@@ -67,7 +67,7 @@ jobs:
     steps:
       - name: step 1
         
-        run: echo "The name  is:${{env.name1 + env.name2}}"  
+        run: echo "The name both are:${{env.name1  env.name2}}"  
         
 
   job2:
@@ -75,7 +75,7 @@ jobs:
     steps:
       - name: step 1
       
-        run: echo "The API key is:${name1 , name2}" 
+        run: echo "The both name are :${name1 , name2}" 
 
 
 # name: main
