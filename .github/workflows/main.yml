@@ -92,14 +92,11 @@ jobs:
   build:
     name: Trigger Site Rebuild
     runs-on: ubuntu-latest
-    env:
-
-      ## Environment variable
-      Name1: "AMAN" 
+   
     steps:
-        
+      - uses: actions/checkout@v1  
       - name: step 1
         ## Another way reference your environment variables
-        run: echo "The API key is:$Name
+        run: echo "runing"
 
 
